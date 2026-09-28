@@ -12,7 +12,7 @@
   },
   "bin": { "coev": "bin/coev.js" },
   "engines": { "node": ">=18" },
-  "scripts": { "test": "node --test test/" },
+  "scripts": { "test": "node --test" },
   "keywords": ["coevolution", "adversarial", "genetic-algorithm", "game-ai", "red-team", "integrity", "receipts", "deterministic"],
   "repository": { "type": "git", "url": "https://github.com/SuperInstance/coev.git" }
 }
