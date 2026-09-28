@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # package.json declares no dependencies; npm install is a cheap guard
+      # that keeps CI correct if deps are ever added.
+      - name: Install
+        run: npm install --no-audit --no-fund
+
+      # Canonical suite runner per tools/run-tests.js (bare `node --test
+      # test/` is version-fragile across Node releases — repo's own note).
+      - name: Test
+        run: node tools/run-tests.js
