@@ -1,0 +1,18 @@
+{
+  "name": "coev",
+  "version": "0.1.0",
+  "description": "Adversarial coevolution engine with champion-integrity auditing. Two populations, red vs blue, the loser mutates harder — and every champion is re-benchmarked against its own claims before you trust it.",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./arenas/*": "./arenas/*",
+    "./src/*": "./src/*"
+  },
+  "bin": { "coev": "bin/coev.js" },
+  "engines": { "node": ">=18" },
+  "scripts": { "test": "node --test test/" },
+  "keywords": ["coevolution", "adversarial", "genetic-algorithm", "game-ai", "red-team", "integrity", "receipts", "deterministic"],
+  "repository": { "type": "git", "url": "https://github.com/SuperInstance/coev.git" }
+}
